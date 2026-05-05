@@ -2516,7 +2516,7 @@
             <textarea id="message" name="message" rows="4"></textarea>
           </div>
           <div class="h-captcha-wrapper">
-            <div class="h-captcha" data-captcha="true"></div>
+            // <div class="h-captcha" data-captcha="true"></div>
             <p class="privacy-note">🔒 We do not sell or share your information. Ever.</p>
           </div>
           <button type="submit" class="form-submit">Send Request</button>
@@ -2996,7 +2996,7 @@
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('.form-submit');
-      <!-- const wrapper = contactForm.querySelector('.h-captcha-wrapper');
+      const wrapper = contactForm.querySelector('.h-captcha-wrapper');
 
       // Get the hCaptcha token — hcaptcha.js injects a textarea when solved
       const hCaptchaTextarea = contactForm.querySelector('textarea[name=h-captcha-response]');
@@ -3007,7 +3007,7 @@
         wrapper.style.borderRadius = '8px';
         setTimeout(() => { wrapper.style.outline = ''; }, 3000);
         return;
-      } -->
+      } 
 
       submitBtn.textContent = 'Sending…';
       submitBtn.disabled = true;
@@ -3015,7 +3015,7 @@
       try {
         const formData = new FormData(contactForm);
         // Explicitly set the token in case FormData missed the injected textarea
-        // formData.set('h-captcha-response', hCaptchaToken);
+        formData.set('h-captcha-response', hCaptchaToken);
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
