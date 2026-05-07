@@ -1849,6 +1849,7 @@
 
       .nav-logo {
         font-size: 20px;
+        display: block; /* not flex — avoids iOS treating flex as containing block for abs .nav-characters */
       }
 
       .nav-links {
@@ -2263,14 +2264,14 @@
       .crew-bubble-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 0.5rem; padding: 0 0.5rem; }
       /* Clip at the stage level — correct boundary, avoids cutting curtain edges */
       /* display:block overrides flex — avoids iOS Safari flex+overflow:hidden centering bug */
-      .crew-portrait-stage { width: min(160px, 43vw); padding-top: 18px; overflow: hidden; display: block; }
+      .crew-portrait-stage { width: min(160px, 43vw); padding-top: 18px; overflow: hidden; display: block; margin: 0 auto; }
       /* 100% = always matches stage width exactly, immune to pixel-rounding */
       .curtain-frame { width: 100%; height: auto; aspect-ratio: 160 / 170; }
       .crew-bubble { display: block; margin: 0 auto; width: min(128px, calc(43vw * 0.8)); height: auto; aspect-ratio: 128 / 154; border-width: 3px; }
     }
     @media (max-width: 380px) {
       .crew-bubble-grid { gap: 1.5rem 0.25rem; padding: 0 0.25rem; }
-      .crew-portrait-stage { width: min(146px, 43vw); padding-top: 16px; }
+      .crew-portrait-stage { width: min(146px, 43vw); padding-top: 16px; margin: 0 auto; }
       .crew-bubble { display: block; margin: 0 auto; width: min(116px, calc(43vw * 0.79)); aspect-ratio: 116 / 140; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -2482,7 +2483,7 @@
           <div class="crew-card" role="listitem">
             <div class="crew-portrait-stage">
               <button type="button" class="crew-bubble" id="bubble-morgan" aria-expanded="false" aria-controls="crewBioModal" aria-haspopup="dialog" data-target="bio-morgan">
-                <img src="media/Morgan.jpg" alt="Portrait of Morgan, Director" class="crew-portrait" loading="lazy">
+                <img src="media/Morgan.jpg" alt="Portrait of Morgan, Director" class="crew-portrait">
               </button>
               <img class="curtain-frame" src="media/curtain_frame.png" alt="" aria-hidden="true" draggable="false" loading="lazy" decoding="async">
             </div>
@@ -2522,10 +2523,10 @@
             <div class="crew-portrait-stage">
               <button type="button" class="crew-bubble crew-bubble-duo" id="bubble-founders" aria-expanded="false" aria-controls="crewBioModal" aria-haspopup="dialog" data-target="bio-founders">
                 <span class="crew-duo-half crew-duo-half-left">
-                  <img src="media/Coralie.jpg" alt="Portrait of Coralie, co-founder" class="crew-portrait" loading="lazy">
+                  <img src="media/Coralie.jpg" alt="Portrait of Coralie, co-founder" class="crew-portrait">
                 </span>
                 <span class="crew-duo-half crew-duo-half-right">
-                  <img src="media/Ralph.jpg" alt="Portrait of Ralph, co-founder" class="crew-portrait" loading="lazy">
+                  <img src="media/Ralph.jpg" alt="Portrait of Ralph, co-founder" class="crew-portrait">
                 </span>
               </button>
               <img class="curtain-frame" src="media/curtain_frame.png" alt="" aria-hidden="true" draggable="false" loading="lazy" decoding="async">
