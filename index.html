@@ -1,0 +1,3339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Puppet Players | Puppet Shows for Schools, Libraries & Events — Utah</title>
+  <meta name="description" content="Professional puppet shows for schools, libraries, assisted living, and events across Utah. 40 years performing, 60,000+ shows. $110 per show, Ogden to Provo. Book online.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Puppet Players | Puppet Shows for Utah Schools & Events">
+  <meta property="og:description" content="Professional puppet shows for schools, libraries, assisted living, and events. 40 years performing, 60,000+ shows. $110, Ogden to Provo.">
+  <meta property="og:image" content="media/frame.png">
+  <meta property="og:url" content="https://puppetplayers.org">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Puppet Players | Puppet Shows for Utah Schools & Events">
+  <meta name="twitter:description" content="Professional puppet shows for schools, libraries, assisted living, and events across Utah. $110 per show.">
+  <meta name="twitter:image" content="media/frame.png">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Puppet Players",
+    "description": "Professional puppet shows for schools, libraries, assisted living communities, birthday parties, and events across Utah.",
+    "telephone": "+18014410483",
+    "email": "info@puppetplayers.org",
+    "url": "https://puppetplayers.org",
+    "priceRange": "$110–$200",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Check, Credit Card, Venmo, PayPal",
+    "areaServed": [
+      "Salt Lake City, UT",
+      "Provo, UT",
+      "Ogden, UT",
+      "Sandy, UT",
+      "Layton, UT",
+      "Park City, UT",
+      "Utah"
+    ],
+    "sameAs": [
+      "https://instagram.com/thepuppetplayers"
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="media/puppet_characters.png">
+  <link rel="apple-touch-icon" href="media/puppet_characters.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Custom Properties - Color Palette */
+    :root {
+      --white: #FDF4E3;
+      --tan: #FAE3B1;
+      --blue: #064567;
+      --blue-light: #0a5a80;
+      --amber: #DE973A;
+      --amber-dark: #c97d28;
+      --green: #998731;
+      --red: #730914;
+      --brown: #311915;
+    }
+
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--brown);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Typography Utility Classes */
+    .rozha {
+      font-family: 'Rozha One', serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.2;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .btn-primary {
+      background-color: var(--amber);
+      color: var(--brown);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--amber-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--amber);
+      border-color: var(--amber);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--amber);
+      color: var(--brown);
+    }
+
+    /* Fade-in Animation for Sections */
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    section.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==== SECTION 2: STICKY NAVIGATION ==== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--green);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      padding: 8px 40px;
+    }
+
+    nav::after {
+      content: '';
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      right: 0;
+      height: 14px;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='14'%3E%3Cpath d='M0,7 Q20,4 40,7 Q60,10 80,5 Q100,9 120,7 Q140,4 160,8 Q180,5 200,7 Q220,10 240,5 Q260,9 280,7 Q300,4 320,8 Q340,5 360,7 Q380,4 400,7' stroke='%23DE973A' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Cpath d='M0,9 Q25,6 50,9 Q75,12 100,7 Q125,10 150,9 Q175,6 200,10 Q225,7 250,9 Q275,12 300,7 Q325,10 350,9 Q375,6 400,9' stroke='%23DE973A' stroke-width='2.5' fill='none' stroke-linecap='round' opacity='0.4'/%3E%3Cpath d='M0,5 Q20,2 40,5 Q60,8 80,3 Q100,7 120,5 Q140,2 160,6 Q180,3 200,5 Q220,8 240,3 Q260,7 280,5 Q300,2 320,6 Q340,3 360,5 Q380,2 400,5' stroke='%23DE973A' stroke-width='1.5' fill='none' stroke-linecap='round' opacity='0.55'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-size: 400px 14px;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav-logo {
+      font-family: 'Rozha One', serif;
+      font-size: 28px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .nav-characters {
+      width: 120px;
+      display: block;
+      margin-top: 0;
+      opacity: 1;
+      animation: puppetBob 2.8s ease-in-out infinite;
+      transform-origin: bottom center;
+      transition: max-height 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
+      max-height: 60px;
+      overflow: visible;
+    }
+
+    @keyframes puppetBob {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25%       { transform: translateY(-5px) rotate(-1deg); }
+      75%       { transform: translateY(-3px) rotate(1deg); }
+    }
+    /* On mobile: pull characters out of the logo column and float them to the
+       right slot (where the CTA lives when scrolled). */
+    @media (max-width: 768px) {
+      .nav-characters {
+        position: absolute;
+        right: 56px;      /* sit just left of the hamburger */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80px;
+        max-height: 44px;
+        margin: 0;
+        animation: puppetBobMobile 2.8s ease-in-out infinite;
+      }
+    }
+    @keyframes puppetBobMobile {
+      0%, 100% { transform: translateY(-50%) rotate(0deg); }
+      25%       { transform: translateY(calc(-50% - 4px)) rotate(-1deg); }
+      75%       { transform: translateY(calc(-50% - 2px)) rotate(1deg); }
+    }
+
+    .h-captcha-wrapper {
+      background: var(--tan, #f5efe6);
+      border: 1px dashed var(--brown, #5c3d2e);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 16px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      min-width: 335px;  /* prevent CLS while hCaptcha iframe loads */
+      min-height: 102px;
+      /* Make sure the iframe is never clipped by an ancestor's stacking
+         context. Children get z-index:1 via .contact-form > *. */
+      overflow: visible;
+      position: relative;
+      z-index: 2;
+    }
+    /* The injected hCaptcha iframe lives inside this div - make sure it
+       can paint outside any flex/overflow constraints and is never sized
+       to zero on mobile. */
+    .h-captcha {
+      display: block;
+      min-height: 78px;
+      line-height: 0;
+      overflow: visible;
+    }
+    .h-captcha iframe {
+      display: block !important;
+      visibility: visible !important;
+    }
+    @media (max-width: 768px) {
+      .h-captcha-wrapper {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 8px;
+        overflow: visible;
+      }
+      /* hCaptcha iframe is ~303px wide. On narrow phones (<360px) it can
+         exceed the form's inner width and get clipped by body{overflow-x:hidden}.
+         Shrink it slightly to guarantee it always fits. */
+      .h-captcha {
+        transform: scale(0.9);
+        transform-origin: center top;
+      }
+    }
+    @media (max-width: 360px) {
+      .h-captcha {
+        transform: scale(0.78);
+        transform-origin: center top;
+      }
+    }
+
+    .privacy-note {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      color: var(--brown, #5c3d2e);
+      opacity: 0.7;
+      text-align: center;
+      width: 100%;
+      padding-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Shown only when the hCaptcha iframe fails to load (e.g. when the page
+       is opened from a file:// URL where the cross-origin script is blocked).
+       Toggled visible by the JS at the bottom of the page. */
+    .captcha-fallback {
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      color: var(--brown, #5c3d2e);
+      opacity: 0.85;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 4px 8px;
+      line-height: 1.4;
+    }
+
+    .privacy-note a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      align-items: center;
+      color: var(--white);
+    }
+
+    .nav-links a {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 28px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .nav-cta-mobile {
+      display: none;
+      background: var(--amber);
+      color: var(--brown);
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 7px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      line-height: 1;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+    .nav-cta-mobile:hover { background: var(--amber-dark); }
+    @media (max-width: 768px) {
+      .nav-cta-mobile { display: none; }
+      nav.scrolled .nav-cta-mobile { display: inline-block; margin-left: auto; margin-right: 12px; }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+      padding: 20px;
+      min-width: 200px;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--tan);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      opacity: 0.7;
+    }
+
+    nav.scrolled .nav-characters {
+      max-height: 0;
+      opacity: 0;
+      margin-top: 0;
+    }
+
+    /* ==== SECTION 3: HERO ==== */
+    .hero {
+      height: 100vh;
+      padding-top: 105px;  /* clears fixed nav */
+      padding-bottom: 12vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Desktop: blue gradient vignette rising from the bottom of the video */
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 45%;
+      background: linear-gradient(to bottom, rgba(6,69,103,0) 0%, rgba(6,69,103,0.55) 60%, rgba(6,69,103,0.82) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        margin-top: 82px;
+        height: auto;
+        min-height: calc(100dvh - 82px);
+        background-color: var(--blue);
+        background-image:
+          radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px),
+          radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px);
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+        /* Pin dot grid to viewport coords so it tiles continuously into
+           the .social-proof section directly below on mobile. */
+        background-attachment: fixed, fixed;
+        padding-top: calc(68vw * 0.65);
+        padding-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      /* Gradient starts high in the video and reaches solid blue before the video edge */
+      .hero::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(68vw * 0.667);
+        height: calc(68vw * 0.333);
+        background: linear-gradient(to bottom, rgba(6,69,103,0) 0%, var(--blue) 100%);
+        z-index: 1;
+        pointer-events: none;
+      }
+      /* Matching vignette over the blue dot zone so dots dim the same way
+         they do in .social-proof - keeps the offset-row polka-dot grid
+         visually continuous across the hero/social-proof boundary. */
+      .hero::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 68vw;                /* start where the video ends */
+        bottom: 0;
+        background:
+          radial-gradient(ellipse 85% 85% at 50% 50%,
+            rgba(6,69,103,0.65) 20%,
+            rgba(6,69,103,0.0) 100%),
+          radial-gradient(ellipse at 50% 0%,
+            rgba(222,151,58,0.08) 0%,
+            transparent 55%);
+        z-index: 1;
+        pointer-events: none;
+      }
+      .hero .hero-content {
+        padding: 0 24px;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+      }
+      /* h1 stays brown over the video; subheadline switches to cream over solid blue */
+      .hero .hero-content h1 {
+        color: var(--white);
+      }
+      .scroll-hint {
+        position: absolute;
+        bottom: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        opacity: 0.6;
+        animation: scrollBounce 2s ease-in-out infinite;
+        pointer-events: none;
+      }
+      .scroll-hint svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: var(--white);
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      @keyframes scrollBounce {
+        0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+        50%       { transform: translateX(-50%) translateY(6px); opacity: 0.9; }
+      }
+      .hero .hero-content .hero-subheadline {
+        color: var(--white);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+        opacity: 1;
+      }
+      .hero-subheadline {
+        margin-top: 14px;   /* nudge subheadline down from h1 */
+      }
+      .hero-buttons {
+        margin-top: 48px;   /* gap from subheadline into solid blue zone */
+      }
+    }
+    .hero .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      opacity: 1;
+      z-index: 0;
+      /* Subtle boost to reduce the flat cellphone-footage look */
+      filter: contrast(1.06) saturate(1.12) brightness(1.02);
+    }
+    @media (max-width: 768px) {
+      .hero .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 68vw;    /* pin video to top strip only - blue hero bg shows below */
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0.75;
+        z-index: 0;
+      }
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 800px;
+      padding: 0 40px;
+      z-index: 10;
+    }
+
+    .hero h1 {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.2;
+      text-shadow: 0 2px 12px rgba(6,69,103,0.6), 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .hero-subheadline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      color: var(--white);
+      max-width: 560px;
+      margin: 0 auto 28px;
+      line-height: 1.5;
+      opacity: 0.85;
+      text-shadow: 0 1px 2px rgba(253,244,227,0.5);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    /* Demoted secondary link in hero */
+    .hero-text-link {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(222,151,58,0.45);
+      padding-bottom: 2px;
+      align-self: center;
+      transition: color 0.2s, border-bottom-color 0.2s;
+    }
+    .hero-text-link:hover {
+      color: var(--white);
+      border-bottom-color: rgba(255,255,255,0.5);
+    }
+    .hero-call-line {
+      width: 100%;
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(253,244,227,0.55);
+      margin-top: 4px;
+    }
+    .hero-call-line a {
+      color: rgba(253,244,227,0.75);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(253,244,227,0.3);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-bottom-color 0.2s;
+    }
+    .hero-call-line a:hover {
+      color: var(--white);
+      border-bottom-color: rgba(253,244,227,0.7);
+    }
+    @media (max-width: 768px) {
+      .hero-buttons {
+        flex-wrap: nowrap;
+        gap: 12px;
+      }
+      .hero-buttons .btn {
+        padding: 11px 18px;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+      }
+    }
+
+    /* ==== SECTION 4: SOCIAL PROOF STRIP ==== */
+    .social-proof {
+      background-color: var(--blue);
+      /* Offset-row polka dots - even rows / odd rows staggered by half a cell.
+         background-attachment: fixed pins the dot grid to viewport coords so
+         it tiles seamlessly across the mobile hero/social-proof boundary. */
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      background-attachment: fixed, fixed;
+      padding: 80px 40px;
+      position: relative;
+      isolation: isolate;
+    }
+    /* Override the section.in-view transform on all screen sizes -
+       even translateY(0) creates a stacking context that breaks
+       background-attachment: fixed. Mobile also needs fixed attachment
+       so the dot grid tiles seamlessly into the hero blue zone above.
+       Also force opacity:1 so the section never fades in - it sits at/near
+       the fold on mobile and a fade-in causes a visible white flash. */
+    .social-proof,
+    .social-proof.in-view {
+      transform: none;
+      opacity: 1;
+    }
+    /* Vignette layer - fades dots at edges & center so text pops */
+    .social-proof::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 85% 85% at 50% 50%,
+          rgba(6,69,103,0.65) 20%,
+          rgba(6,69,103,0.0) 100%),
+        radial-gradient(ellipse at 50% 0%,
+          rgba(222,151,58,0.08) 0%,
+          transparent 55%);
+    }
+    .social-proof > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-proof-container {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonial-card {
+      background: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+    }
+
+
+    .testimonial-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: var(--white);
+      margin: 0 0 22px;
+    }
+
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after  { content: '\201D'; }
+
+
+    .testimonial-attribution {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      display: block;
+    }
+
+    /* ==== SECTION 5: THE TRANSFORMATION ==== */
+    .transformation {
+      background: linear-gradient(135deg, #FAE3B1 0%, #FDF4E3 100%);
+      padding: 110px 40px 130px;
+      position: relative;
+      overflow: hidden;
+    }
+    .transformation > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .transformation-content {
+      max-width: 1080px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .transformation h2 {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+      color: var(--brown);
+      margin: 0 auto;
+      max-width: 18ch;
+      text-align: center;
+      line-height: 1.15;
+      letter-spacing: -0.005em;
+    }
+    .transformation h2 .accent {
+      color: var(--amber);
+      font-style: italic;
+      position: relative;
+      white-space: nowrap;
+    }
+    .transformation h2 .accent::after {
+      content: '';
+      position: absolute;
+      left: 4%;
+      right: 4%;
+      bottom: -0.08em;
+      height: 0.14em;
+      background: var(--amber);
+      opacity: 0.35;
+      border-radius: 3px;
+      transform: skewX(-8deg);
+    }
+
+    .transformation-photos {
+      margin: 70px auto 0;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .transformation-photos figure {
+      margin: 0;
+      background: var(--white);
+      padding: 14px;
+      border-radius: 4px;
+      box-shadow:
+        0 22px 44px -18px rgba(0,0,0,0.55),
+        0 4px 10px -4px rgba(0,0,0,0.35);
+      position: relative;
+      transition: transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s ease;
+    }
+    /* Slightly varied heights + opposing tilts give a candid, scrapbook feel */
+    .transformation-photos figure:nth-child(1) {
+      transform: rotate(-1.6deg) translateY(-14px);
+    }
+    .transformation-photos figure:nth-child(2) {
+      transform: rotate(1.8deg) translateY(18px);
+    }
+    .transformation-photos figure:hover {
+      transform: rotate(0deg) translateY(-4px) scale(1.015);
+      box-shadow:
+        0 30px 56px -20px rgba(0,0,0,0.6),
+        0 6px 14px -4px rgba(0,0,0,0.4);
+      z-index: 2;
+    }
+    /* A small piece of "tape" at the top of each polaroid */
+    .transformation-photos figure::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 78px;
+      height: 22px;
+      background: rgba(250, 227, 177, 0.55);
+      border: 1px solid rgba(250, 227, 177, 0.35);
+      transform: translateX(-50%) rotate(-2deg);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+    .transformation-photos figure:nth-child(2)::before {
+      transform: translateX(-50%) rotate(2deg);
+    }
+    .transformation-photos img {
+      display: block;
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: saturate(1.05) contrast(1.02);
+    }
+    .transformation-photos figure:nth-child(2) img {
+      height: 340px;
+    }
+    @media (max-width: 768px) {
+      .transformation { padding: 70px 24px 80px; }
+      .transformation-photos {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-top: 44px;
+        max-width: 360px;
+      }
+      .transformation-photos figure:nth-child(1) {
+        transform: rotate(-1.4deg);
+      }
+      .transformation-photos figure:nth-child(2) {
+        transform: rotate(1.6deg);
+      }
+      .transformation-photos img,
+      .transformation-photos figure:nth-child(2) img {
+        height: 280px;
+      }
+    }
+
+    /* ==== SECTION 6: THE SHOWS ==== */
+    .shows-section {
+      background-color: var(--blue);
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      background-attachment: fixed, fixed;
+      padding: 80px 40px;
+      position: relative;
+      isolation: isolate;
+    }
+    .shows-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 85% 85% at 50% 50%,
+          rgba(6,69,103,0.65) 20%,
+          rgba(6,69,103,0.0) 100%),
+        radial-gradient(ellipse at 50% 0%,
+          rgba(222,151,58,0.08) 0%,
+          transparent 55%);
+    }
+    .shows-section > * {
+      position: relative;
+      z-index: 1;
+    }
+    /* Prevent in-view transform from breaking background-attachment: fixed */
+    .shows-section,
+    .shows-section.in-view {
+      transform: none;
+    }
+
+    .shows-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .shows-section h2 {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--white);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .shows-subheading {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--tan);
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .shows-cost-line {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      text-align: center;
+      margin-top: -38px;
+      margin-bottom: 50px;
+    }
+
+    /* Shows carousel */
+    .shows-carousel-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .shows-viewport {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .shows-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Each page is exactly 100% of the viewport - 3 cards in a grid inside */
+    .shows-page {
+      flex: 0 0 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    .show-card {
+      background-color: var(--blue-light);
+      padding: 28px 24px;
+      border-radius: 8px;
+      border-top: 4px solid var(--amber);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tri-color top borders cycling red / green / amber */
+    .shows-page:nth-child(1) .show-card:nth-child(1),
+    .shows-page:nth-child(2) .show-card:nth-child(1),
+    .shows-page:nth-child(3) .show-card:nth-child(1),
+    .shows-page:nth-child(4) .show-card:nth-child(1) { border-top-color: var(--red); }
+    .shows-page:nth-child(1) .show-card:nth-child(2),
+    .shows-page:nth-child(2) .show-card:nth-child(2),
+    .shows-page:nth-child(3) .show-card:nth-child(2),
+    .shows-page:nth-child(4) .show-card:nth-child(2) { border-top-color: var(--green); }
+    .shows-page:nth-child(1) .show-card:nth-child(3),
+    .shows-page:nth-child(2) .show-card:nth-child(3),
+    .shows-page:nth-child(3) .show-card:nth-child(3),
+    .shows-page:nth-child(4) .show-card:nth-child(3) { border-top-color: var(--amber); }
+
+    .show-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    /* Show card thumbnail */
+    .show-card-thumb {
+      width: calc(100% + 48px);   /* bleed over card padding */
+      margin: -28px -24px 20px;   /* pull flush to card edges */
+      height: 180px;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .show-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .show-card:hover .show-card-thumb img {
+      transform: scale(1.05);
+    }
+
+    /* Placeholder for shows without a thumbnail */
+    .show-card-thumb--placeholder {
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .show-card-thumb--starburst {
+      position: relative;
+      padding: 0;
+    }
+    .show-card-thumb--starburst svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .show-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* Prev/Next arrow buttons */
+    .carousel-arrow {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--amber);
+      background: transparent;
+      color: var(--amber);
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s;
+    }
+    .carousel-arrow:hover {
+      background: var(--amber);
+      color: var(--brown);
+    }
+
+    .shows-view-all {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    /* Show Modal */
+    body.modal-open { overflow: hidden; }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 2000;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      padding: 40px 20px;
+    }
+    .modal-overlay.active { display: block; }
+
+    .modal {
+      background: var(--white);
+      border-radius: 10px;
+      max-width: 680px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 44px;
+      position: relative;
+      animation: slideUp 0.3s ease-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(24px); opacity: 0; }
+      to   { transform: translateY(0);   opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px; right: 22px;
+      background: none; border: none;
+      font-size: 28px; color: var(--brown);
+      cursor: pointer; line-height: 1;
+    }
+
+    /* Crew bio modal */
+    .crew-bio-modal-inner {
+      max-width: 660px;
+    }
+    #crewBioContent .crew-bio-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--blue);
+      margin-bottom: 1.2rem;
+    }
+    #crewBioContent .crew-bio-role {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--brown);
+      opacity: 0.8;
+    }
+    #crewBioContent p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+    #crewBioContent p:last-child { margin-bottom: 0; }
+    #crewBioContent a { color: var(--blue); text-decoration: underline; }
+    .modal h2 {
+      font-family: 'Rozha One', serif;
+      font-size: 2.2rem;
+      color: var(--brown);
+      margin-bottom: 28px;
+    }
+    .modal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 18px;
+    }
+    .modal-show-card {
+      background: var(--white);
+      border: 1px solid var(--tan);
+      border-left: 4px solid var(--red);
+      padding: 20px;
+      border-radius: 6px;
+    }
+    .modal-show-card:nth-child(even) { border-left-color: var(--green); }
+    .modal-show-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+    .modal-show-card .show-badges { margin-bottom: 10px; }
+    .modal-show-card p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      color: var(--brown);
+      line-height: 1.5;
+    }
+
+    .show-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .show-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .badge-grade {
+      background-color: var(--amber);
+      color: var(--brown);
+    }
+
+    .show-description {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--tan);
+      line-height: 1.6;
+    }
+
+    /* Carousel dots (used by crew + testimonial carousels) */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--tan);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active { background-color: var(--amber); }
+
+    /* ==== SECTION 7: HOW IT WORKS ==== */
+    .how-it-works {
+      background-color: var(--white);
+      padding: 80px 40px;
+    }
+
+    .how-it-works-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .how-it-works h2 {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--brown);
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .steps-container {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      font-family: 'Rozha One', serif;
+      font-size: 4rem;
+      color: var(--amber);
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+
+
+    .step:nth-child(1) .step-number {
+      color: var(--red);
+    }
+
+    .step:nth-child(2) .step-number {
+      color: var(--green);
+    }
+
+    .step:nth-child(3) .step-number {
+      color: var(--amber);
+    }
+
+    .step-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--brown);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .step-description {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      color: var(--brown);
+      line-height: 1.6;
+    }
+
+    .steps-container::before {
+      content: '';
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-image: linear-gradient(to right, var(--tan) 50%, transparent 50%);
+      background-size: 12px 2px;
+      background-repeat: repeat-x;
+      z-index: -1;
+    }
+
+    /* Used in the Section 4 social-proof testimonial card */
+    .testimonial-stars {
+      color: var(--amber);
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+      display: block;
+      text-align: center;
+      line-height: 1;
+    }
+
+    /* ==== SECTION 10: FAQ ==== */
+    .faq-section {
+      background-color: var(--white);
+      padding: 80px 40px;
+    }
+
+    .faq-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-section h2 {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--brown);
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .accordion {
+      border: 1px solid var(--tan);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--tan);
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      padding: 24px;
+      background-color: var(--white);
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: var(--tan);
+    }
+
+    .accordion-header-text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--brown);
+    }
+
+    .accordion-toggle {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.5rem;
+      color: var(--amber);
+      font-weight: bold;
+      transition: transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+    .accordion-item.is-open .accordion-toggle {
+      transform: rotate(45deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-content.active {
+      max-height: 1200px;
+    }
+
+    .accordion-body {
+      padding: 0 24px 24px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      color: var(--brown);
+      line-height: 1.8;
+    }
+
+    .faq-list {
+      margin: 4px 0 0;
+      padding-left: 1.25rem;
+    }
+    .faq-list li {
+      margin-bottom: 8px;
+    }
+    .faq-list li:last-child { margin-bottom: 0; }
+    .accordion-body p + .faq-list { margin-top: 8px; }
+
+    /* ==== SECTION 11: FINAL CTA + CONTACT FORM ==== */
+    .final-cta {
+      background: linear-gradient(135deg, #FAE3B1 0%, #FDF4E3 100%);
+      padding: 80px 40px;
+      position: relative;
+      isolation: isolate;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+      background: #fff; /* required: gives feTurbulence a surface to render on */
+      filter: url('#papergrain');
+    }
+    .final-cta > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-family: 'Rozha One', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .final-cta .subtext {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--brown);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      background-color: var(--white);
+      padding: 40px;
+      border-radius: 8px;
+      margin-top: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      isolation: isolate;
+    }
+    .contact-form::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+      background: #fff;
+      filter: url('#papergrain');
+      border-radius: 8px;
+    }
+    .contact-form > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .contact-form label {
+      display: block;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--brown);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--white);
+      border: 1px solid var(--brown);
+      border-radius: 4px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: var(--brown);
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--amber);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 14px 32px;
+      background-color: var(--amber);
+      color: var(--brown);
+      border: none;
+      border-radius: 6px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-submit:hover {
+      background-color: var(--amber-dark);
+      transform: translateY(-2px);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .trust-strip {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 20px;
+      margin: 16px 0 0;
+      padding: 0;
+    }
+    .trust-strip li {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+      opacity: 0.65;
+      padding-left: 14px;
+      position: relative;
+    }
+    .trust-strip li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      opacity: 1;
+    }
+
+    .success-message {
+      display: none;
+      background-color: var(--green);
+      color: var(--white);
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+    }
+
+    .success-message.show {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    .error-message {
+      display: none;
+      background-color: #b3261e;
+      color: var(--white);
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      border: 1px solid #7a1810;
+    }
+
+    .error-message.show {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* ==== SECTION 12: FOOTER ==== */
+    footer {
+      background-color: var(--green);
+      color: var(--white);
+      padding: 36px 40px 18px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .footer-service-area {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8rem;
+      color: var(--tan);
+      opacity: 0.85;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .footer-col h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+
+    .footer-logo {
+      font-family: 'Rozha One', serif;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 7px;
+    }
+
+    .footer-links a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      color: var(--tan);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      opacity: 0.7;
+    }
+
+    .footer-contact {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      color: var(--tan);
+      margin-bottom: 14px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-links a {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--tan);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--tan);
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .instagram-link:hover {
+      color: var(--amber);
+      opacity: 1;
+    }
+
+    .social-links a:hover {
+      opacity: 0.7;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 16px;
+      text-align: center;
+    }
+
+    .copyright {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--tan);
+    }
+
+    /* ==== CREW SECTION ==== */
+    .crew .section-heading { color: var(--white); }
+
+    .crew {
+      background-color: var(--blue);
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.18) 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      background-attachment: fixed, fixed;
+      padding: 100px 0;
+      position: relative;
+      isolation: isolate;
+    }
+    .crew::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 85% 85% at 50% 50%,
+          rgba(6,69,103,0.65) 20%,
+          rgba(6,69,103,0.0) 100%),
+        radial-gradient(ellipse at 50% 0%,
+          rgba(222,151,58,0.08) 0%,
+          transparent 55%);
+    }
+    .crew > * {
+      position: relative;
+      z-index: 1;
+    }
+    /* Prevent in-view transform from breaking background-attachment: fixed */
+    .crew,
+    .crew.in-view {
+      transform: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-heading {
+      font-family: 'Rozha One', serif;
+      font-size: 3rem;
+      color: var(--brown);
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: normal;
+    }
+
+    /* Old crew carousel CSS removed - replaced by bubble grid (task #5) */
+
+    /* ==== RESPONSIVE DESIGN ==== */
+    @media (max-width: 768px) {
+      nav {
+        padding: 26px 20px;
+        min-height: 82px;
+        box-sizing: border-box;
+      }
+      nav.scrolled {
+        padding: 12px 20px;
+        min-height: 52px;
+      }
+
+      .nav-logo {
+        font-size: 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+
+
+      .shows-page {
+        grid-template-columns: 1fr;
+      }
+      .carousel-arrow { display: none; }
+
+      .steps-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .steps-container::before {
+        display: none;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .performer-shape {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: clamp(2.2rem, 7vw, 2.8rem);
+        margin-bottom: 14px;
+      }
+
+      .hero-subheadline {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .hero-buttons .btn {
+        padding: 14px 20px;
+        font-size: 14px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .shows-section {
+        padding: 50px 24px;
+      }
+
+      .how-it-works {
+        padding: 50px 24px;
+      }
+
+      .step-number {
+        font-size: 2.5rem;
+      }
+
+      .faq-section {
+        padding: 50px 24px;
+      }
+
+      .accordion-header {
+        padding: 16px;
+      }
+
+      .accordion-body {
+        padding: 0 16px 16px;
+      }
+
+      .final-cta {
+        padding: 50px 24px;
+      }
+
+      .contact-form {
+        padding: 24px;
+      }
+
+      .modal {
+        padding: 20px;
+        max-width: 90vw;
+      }
+
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== About intro ===== */
+    .about-stats-text {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tan);
+      opacity: 0.7;
+      text-align: center;
+      margin: 0 auto 2.5rem;
+      max-width: 700px;
+      line-height: 2;
+    }
+
+    /* ===== About poster ===== */
+    .about-poster {
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .about-poster figure {
+      margin: 0;
+      background: var(--white);
+      padding: 14px 14px 14px;
+      border-radius: 4px;
+      box-shadow:
+        0 22px 44px -18px rgba(0,0,0,0.55),
+        0 4px 10px -4px rgba(0,0,0,0.35);
+      position: relative;
+      transform: rotate(1.2deg);
+      transition: transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s ease;
+    }
+    .about-poster figure:hover {
+      transform: rotate(0deg) translateY(-4px) scale(1.015);
+      box-shadow:
+        0 30px 56px -20px rgba(0,0,0,0.6),
+        0 6px 14px -4px rgba(0,0,0,0.4);
+    }
+    /* Tape strip across the top */
+    .about-poster figure::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 78px;
+      height: 22px;
+      background: rgba(250, 227, 177, 0.55);
+      border: 1px solid rgba(250, 227, 177, 0.35);
+      transform: translateX(-50%) rotate(-1.5deg);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+    .about-poster img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: saturate(1.05) contrast(1.02);
+    }
+
+    @media (max-width: 720px) {
+      .about-poster { max-width: 100%; padding: 0 1rem; margin-bottom: 2.25rem; }
+    }
+
+    /* ===== About two-column layout (desktop) ===== */
+    .about-layout {
+      display: block;
+    }
+
+    @media (min-width: 769px) {
+      .about-layout {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        gap: 2.5rem;
+        align-items: stretch;
+        max-width: 1100px;
+        margin: 0 auto 3rem;
+      }
+      .about-layout .about-text-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      /* Override centering / max-width caps so the poster fills its column */
+      .about-layout .about-poster {
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        height: 100%;
+      }
+      .about-layout .about-poster figure {
+        height: 100%;
+      }
+      .about-layout .about-poster img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* Heading + stats keep their typographic alignment inside the text column */
+      .about-layout .section-heading {
+        text-align: left;
+      }
+      .about-layout .about-story-wrap,
+      .about-layout .about-story-preview {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .about-layout .about-stats-text {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    /* ===== Our Story preview text ===== */
+    .about-story-wrap {
+      text-align: center;
+      margin: 0 auto 3.5rem;
+    }
+    .about-story-preview {
+      max-width: 700px;
+      margin: 0 auto 1.25rem;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--tan);
+      text-align: left;
+    }
+
+    /* ===== Crew bubble grid ===== */
+    .crew-bubble-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      align-items: end;
+    }
+    .crew-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .crew-bubble {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 200px;
+      height: 240px;
+      padding: 0;
+      border: 5px solid var(--amber);
+      border-radius: 50% 50% 12px 12px / 40% 40% 12px 12px;
+      background: var(--blue);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 8px 0 var(--brown), 0 10px 20px rgba(0,0,0,0.25);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .crew-bubble:hover,
+    .crew-bubble:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 0 var(--brown), 0 14px 28px rgba(0,0,0,0.32);
+      border-color: var(--amber);
+    }
+    .crew-bubble:focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 4px;
+    }
+    .crew-bubble[aria-expanded="true"] {
+      border-color: var(--white);
+      box-shadow: 0 0 0 4px var(--amber), 0 10px 24px rgba(0,0,0,0.32);
+    }
+    /* Hover overlay - "View Bio" label */
+    .crew-bubble::after {
+      content: 'View Bio';
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 69, 103, 0.72);
+      color: var(--white);
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: grid;
+      place-items: center;       /* more reliable than flex on button pseudo-el */
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+    .crew-bubble:hover::after,
+    .crew-bubble:focus-visible::after {
+      opacity: 1;
+    }
+    /* Touch: show persistent bottom badge instead of hover overlay */
+    @media (hover: none) {
+      .crew-bubble::after {
+        content: 'Tap to Learn More';
+        inset: auto 0 0 0;
+        height: 30px;
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        background: rgba(6, 69, 103, 0.85);
+        opacity: 1;
+        place-items: center;
+      }
+    }
+    .crew-portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .crew-portrait-video {
+      background: var(--blue);
+      /* Source clips frame Aurora/Kylie + a puppet side-by-side; default
+         object-position: 50% 50% lands on the dark fabric between them and
+         pushes the puppeteer's face under the arch border-radius. Bias the
+         crop toward the upper-right so the face sits inside the visible
+         bubble area. */
+      object-position: 78% 25%;
+    }
+    /* Aurora's clip is framed slightly tighter than Kylie's - push a bit
+       further right so her face clears the arch on small screens. */
+    #bubble-aurora .crew-portrait-video {
+      object-position: 82% 22%;
+    }
+    
+
+    /* ===== Portrait stage + curtains ===== */
+    /* ── Portrait Stage - theatrical curtain frame ── */
+    .crew-portrait-stage {
+      position: relative;
+      width: 252px;             /* matches curtain frame exactly - fills side gaps with navy */
+      margin: 0 auto;
+      padding-top: 28px;        /* valance brushes portrait top */
+      background: var(--blue);  /* fills behind curtain panels and above portrait */
+      overflow: visible;
+      display: flex;
+      justify-content: center;  /* centre the 200px bubble within 252px stage */
+    }
+
+    /* ── Curtain frame PNG overlay - replaces all CSS clip-path curtains + valance ── */
+    .curtain-frame {
+      position: absolute;
+      top: 0;
+      left: 0;                  /* stage is now 252px - no horizontal offset needed */
+      width: 252px;
+      height: 268px;
+      pointer-events: none;
+      z-index: 4;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.35));
+    }
+
+    /* Duo bubble - split arch into two photo halves */
+    .crew-bubble-duo {
+      display: flex;
+      flex-direction: row;
+    }
+    .crew-duo-half {
+      display: block;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .crew-duo-half + .crew-duo-half {
+      border-left: 2px solid var(--amber);
+    }
+    .crew-duo-half .crew-portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .crew-duo-half-left .crew-portrait { object-position: 75% 25%; }
+    .crew-duo-half-right .crew-portrait { object-position: 25% 25%; }
+
+    /* ===== Bio modal fade-in animation ===== */
+    @keyframes bioFadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 1024px) {
+      .crew-bubble-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .crew-bubble-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; padding: 0 1rem; }
+    }
+    @media (max-width: 600px) {
+      .crew-bubble-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 0.5rem; padding: 0 0.5rem; }
+      .crew-portrait-stage { width: 160px; padding-top: 18px; }
+      .curtain-frame { width: 160px; height: 170px; }
+      .crew-bubble { width: 128px; height: 154px; border-width: 3px; }
+    }
+    @media (max-width: 420px) {
+      /* Scale stage + curtain by 0.85 so the 200px arch aligns with the 170px bubble */
+      .crew-bubble { width: 170px; height: 204px; border-width: 4px; }
+      .crew-portrait-stage { width: 214px; padding-top: 24px; }
+      .curtain-frame { width: 214px; height: 228px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .crew-bubble { transition: none; animation: none; }
+      .crew-bubble::after { transition: none; }
+    }
+
+    /* ── Crew member name ── */
+    .crew-name {
+      margin: 14px 0 0;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      color: var(--tan);
+      text-shadow: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Hidden SVG filter definitions - paper grain texture -->
+  <svg aria-hidden="true" focusable="false"
+       style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <filter id="papergrain" x="0%" y="0%" width="100%" height="100%"
+              color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.82"
+                      numOctaves="2" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="matrix"
+          values="0 0 0 0 0.16  0 0 0 0 0.09  0 0 0 0 0.05  0 0 0 0.45 0"
+          result="coloredNoise"/>
+      </filter>
+    </defs>
+  </svg>
+
+
+  <!-- ==== SECTION 2: STICKY NAVIGATION ==== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        The Puppet Players
+        <img src="media/puppet_characters.png" class="nav-characters" alt="Puppet characters" loading="eager" decoding="async" width="120" height="60">
+      </a>
+      <a href="#contact" class="nav-cta-mobile" aria-label="Request a show">Request a Show</a>
+      <ul class="nav-links">
+        <li><a href="#shows">Current Shows</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn btn-primary">Request a Show</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#shows">Current Shows</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-primary" style="display: block;">Request a Show</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==== SECTION 3: HERO ==== -->
+  <header class="hero" id="hero">
+    <video class="hero-video" autoplay loop muted playsinline preload="metadata" poster="media/frame.png">
+      <source src="media/pptpmaingif2.webm" type="video/webm">
+      <source src="media/pptpmaingif2.mp4" type="video/mp4">
+    </video>
+       <div class="hero-content">
+      <h1>A Timeless Tradition.</h1>
+      <p class="hero-subheadline">Hand-puppet theater traveling Utah since 1986 - from Ogden to Provo bringing wonder to your door.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Request a Show</a>
+        <a href="#shows" class="hero-text-link">Browse our shows &rarr;</a>
+        <p class="hero-call-line">Or call/text <a href="tel:8014410483">(801) 441-0483</a></p>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==== SECTION 4: SOCIAL PROOF STRIP ==== -->
+    <section class="social-proof">
+      <div class="social-proof-container">
+
+        <!-- Quote 1 - live -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-quote">We have been working with Puppet Players once a month for several years now, and we absolutely love and enjoy them! Each visit brings a new and exciting theme, which keeps the children engaged and especially excited[...] The children talk about it long after the show, and the parents are just as excited to hear all about it at pickup. Puppet Players consistently deliver fun, educational, and memorable experiences. We truly look forward to every visit!</p>
+          <p class="testimonial-attribution">Sue Hardin, Director, ABC Great Beginnings - Riverton</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==== SECTION 5: THE TRANSFORMATION ==== -->
+    <section class="transformation">
+      <div class="transformation-content">
+<h2>A break from screens. A room full of <span class="accent">magic</span>.</h2>
+        <div class="transformation-photos">
+          <figure>
+            <img src="media/candid.jpg" alt="Kids laughing during a Puppet Players show" loading="lazy">
+          </figure>
+          <figure>
+            <img src="media/candid1.jpg" alt="Audience members enjoying a Puppet Players performance" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== SECTION 6: THE SHOWS ==== -->
+    <section class="shows-section" id="shows">
+      <div class="shows-content">
+        <h2>Current Shows</h2>
+        <p class="shows-subheading">One for every month of the year.</p>
+        <p class="shows-cost-line">$110 per show, anywhere from Ogden to Provo.</p>
+
+        <div class="shows-carousel-wrapper">
+          <button class="carousel-arrow carousel-arrow-left" id="showsPrev" aria-label="Previous shows">&#8592;</button>
+          <div class="shows-viewport" id="showsViewport">
+            <div class="shows-track" id="showsTrack">
+              <!-- 4 pages of 3 cards each, built by JS -->
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-arrow-right" id="showsNext" aria-label="Next shows">&#8594;</button>
+        </div>
+        <div class="carousel-dots" id="showsDots"></div>
+
+        <div class="shows-view-all">
+          <button class="btn btn-outline" id="viewAllBtn">View Full Show List</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Show Modal -->
+    <div class="modal-overlay" id="showModal">
+      <div class="modal">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
+        <h2>All 12 Shows</h2>
+        <div class="modal-grid" id="modalShowsGrid"></div>
+      </div>
+    </div>
+
+    <!-- ==== SECTION 7: HOW IT WORKS ==== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="how-it-works-content">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <p class="step-title">Request a Show</p>
+            <p class="step-description">Fill out our quick form with your date, location, and group type. We'll confirm availability and get you on the calendar - usually within 24 hours.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <p class="step-title">We Roll Up With Everything</p>
+            <p class="step-description">We bring everything - puppets, portable stage, and battery-powered sound. Our setup fits anywhere: classrooms, libraries, courtyards, living rooms. Just point us to a spot and we'll set up in 10 minutes.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <p class="step-title">Showtime</p>
+            <p class="step-description">Your puppeteer arrives ready to perform. Audiences laugh, participate, and leave talking about it for weeks. You get the easiest assembly day of the year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== SECTION 8: MEET OUR CREW ==== -->
+    <section class="crew" id="about">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-text-col">
+            <h2 class="section-heading rozha">Meet The Puppet Players</h2>
+
+            <div class="about-story-wrap">
+              <p class="about-story-preview">The Puppet Players began back in 1986 with the idea that puppet shows should be fun, creative, and accessible to all ages. We bring professional shows to elementary schools, libraries, daycares, preschools, birthday parties, churches, assisted living communities, and more - from Ogden to Provo. The colorful characters are hand puppets, and the stories are full of imagination, music, and meaningful lessons for every audience. Every show includes a hands-on portion where members of the audience get to participate and be part of the puppet fun.</p>
+            </div>
+
+            <p class="about-stats-text">40 years touring Utah &middot; 60,000+ shows performed &middot; Every age, preschool to assisted living</p>
+          </div>
+
+          <div class="about-poster">
+            <figure>
+              <img src="media/poster.jpg" alt="Puppet Players show poster" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+        <div class="crew-bubble-grid" role="list">
+
+          <!-- Morgan -->
+          <div class="crew-card" role="listitem">
+            <div class="crew-portrait-stage">
+              <button type="button" class="crew-bubble" id="bubble-morgan" aria-expanded="false" aria-controls="crewBioModal" aria-haspopup="dialog" data-target="bio-morgan">
+                <img src="media/Morgan.jpg" alt="Portrait of Morgan, Director" class="crew-portrait" loading="lazy">
+              </button>
+              <img class="curtain-frame" src="media/curtain_frame.png" alt="" aria-hidden="true" draggable="false" loading="lazy" decoding="async">
+            </div>
+            <h3 class="crew-name">Morgan</h3>
+          </div>
+
+          <!-- Aurora -->
+          <div class="crew-card" role="listitem">
+            <div class="crew-portrait-stage">
+              <button type="button" class="crew-bubble" id="bubble-aurora" aria-expanded="false" aria-controls="crewBioModal" aria-haspopup="dialog" data-target="bio-aurora">
+                <video class="crew-portrait crew-portrait-video" autoplay loop muted playsinline preload="metadata" aria-label="Animated portrait of Aurora, Puppeteer">
+                  <source src="media/auroragif2.webm" type="video/webm">
+                  <source src="media/auroragif2.mp4" type="video/mp4">
+                </video>
+              </button>
+              <img class="curtain-frame" src="media/curtain_frame.png" alt="" aria-hidden="true" draggable="false" loading="lazy" decoding="async">
+            </div>
+            <h3 class="crew-name">Aurora</h3>
+          </div>
+
+          <!-- Kylie -->
+          <div class="crew-card" role="listitem">
+            <div class="crew-portrait-stage">
+              <button type="button" class="crew-bubble" id="bubble-kylie" aria-expanded="false" aria-controls="crewBioModal" aria-haspopup="dialog" data-target="bio-kylie">
+                <video class="crew-portrait crew-portrait-video" autoplay loop muted playsinline preload="metadata" aria-label="Animated portrait of Kylie, Puppeteer">
+                  <source src="media/kyliegif.webm" type="video/webm">
+                  <source src="media/kyliegif.mp4" type="video/mp4">
+                </video>
+              </button>
+              <img class="curtain-frame" src="media/curtain_frame.png" alt="" aria-hidden="true" draggable="false" loading="lazy" decoding="async">
+            </div>
+            <h3 class="crew-name">Kylie</h3>
+          </div>
+
+          <!-- Coralie & Ralph -->
+          <div class="crew-card crew-card-duo" role="listitem">
+            <div class="crew-portrait-stage">
+              <button type="button" class="crew-bubble crew-bubble-duo" id="bubble-founders" aria-expanded="false" aria-controls="crewBioModal" aria-haspopup="dialog" data-target="bio-founders">
+                <span class="crew-duo-half crew-duo-half-left">
+                  <img src="media/Coralie.jpg" alt="Portrait of Coralie, co-founder" class="crew-portrait" loading="lazy">
+                </span>
+                <span class="crew-duo-half crew-duo-half-right">
+                  <img src="media/Ralph.jpg" alt="Portrait of Ralph, co-founder" class="crew-portrait" loading="lazy">
+                </span>
+              </button>
+              <img class="curtain-frame" src="media/curtain_frame.png" alt="" aria-hidden="true" draggable="false" loading="lazy" decoding="async">
+            </div>
+            <h3 class="crew-name">Coralie &amp; Ralph</h3>
+          </div>
+
+        </div><!-- end crew-bubble-grid -->
+
+      </div>
+    </section>
+    <!-- ==== SECTION 10: FAQ ==== -->
+    <section class="faq-section">
+      <div class="faq-content">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-1">
+              <span class="accordion-header-text">How far in advance should we book?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-1">
+              <div class="accordion-body">
+                Depending on availability, at least 24hrs are needed to book a show or workshop, though we encourage booking at least 2-4 weeks in advance for our summer and winter holiday months to ensure your preferred date and time are available.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-2">
+              <span class="accordion-header-text">How much does a show cost?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-2">
+              <div class="accordion-body">
+                <ul class="faq-list">
+                  <li>One puppet show is <strong>$110</strong> - regardless of group size.</li>
+                  <li>A one-hour workshop is <strong>$200</strong> for up to 20 attendees. Each additional attendee is $5.</li>
+                  <li>Prices are slightly increased for weekends or evenings.</li>
+                  <li>Discounts available for multiple bookings, payment in advance, or combinations with workshops.</li>
+                  <li>Reach out with any questions, concerns, or ideas - we're happy to work with you.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-3">
+              <span class="accordion-header-text">How long is each show?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-3">
+              <div class="accordion-body">
+                <p>Each show has an average run time of 30-45 minutes, which includes a "hands-on" portion, where members from the audience get to participate and be part of the puppet fun.</p>
+                <p>Let us know of any specific time requirements. We can adjust the show to best fit your center's needs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-4">
+              <span class="accordion-header-text">What types of events do you attend?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-4">
+              <div class="accordion-body">
+                <p>We perform almost anywhere our little stage can fit. Common venues include:</p>
+                <ul class="faq-list">
+                  <li>Daycares, preschools, and elementary schools</li>
+                  <li>Afterschool programs and summer camps</li>
+                  <li>Libraries, rec centers, and medical centers</li>
+                  <li>Church activities and assisted-living communities</li>
+                  <li>Birthday parties and Arts in the Parks events</li>
+                  <li>Farmers markets, resorts, goblin caves, underwater scuba concerts…</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-5">
+              <span class="accordion-header-text">How do you accept payment?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-5">
+              <div class="accordion-body">
+                We can accept cash, check, card, Venmo and PayPal. Payment is not due until the scheduled show date or within the two following weeks.
+               </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-6">
+              <span class="accordion-header-text">What if I need to cancel or reschedule a show?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-6">
+              <div class="accordion-body">
+                We know things happen! We request a minimum of 24 hours before your show time to cancel or reschedule your puppet show. There is no cancellation fee, however, if a puppeteer shows up at a scheduled show without prior warning of cancellation from the client, the client will be charged 20% of the show price.
+               </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-7">
+              <span class="accordion-header-text">Do you travel outside Utah?</span>
+              <span class="accordion-toggle">+</span>
+            </button>
+            <div class="accordion-content" id="faq-panel-7">
+              <div class="accordion-body">
+                Yes - get in touch and we'll work something out.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== SECTION 11: FINAL CTA + CONTACT FORM ==== -->
+    <section class="final-cta" id="contact">
+      <div class="cta-content">
+        <h2>Pick a date - we'll do the rest.</h2>
+
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="42a7042d-dbdb-4511-9953-c790ecbe99e3">
+          <input type="hidden" name="subject" value="New Show Booking Request - The Puppet Players">
+          <input type="hidden" name="from_name" value="Puppet Players Website">
+          <!-- Web3Forms honeypot: bots tend to fill every field; humans never see this -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="success-message" id="successMessage">
+            Thank you! We'll be in touch within 48 hours.
+          </div>
+          <div class="error-message" id="errorMessage" role="alert" aria-live="polite"></div>
+          <div class="form-group">
+            <label for="name">Name & Title *</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="school">Organization Name *</label>
+            <input type="text" id="school" name="school" autocomplete="organization" required>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Show Address *</label>
+            <input type="text" id="address" name="address" autocomplete="street-address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Date *</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Preferred Time *</label>
+            <input type="text" id="time" name="time" placeholder="e.g. 10am, early afternoon…" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="referral">How did you hear about us?</label>
+            <input type="text" id="referral" name="referral" autocomplete="off">
+          </div>
+          <div class="h-captcha-wrapper">
+            <div class="h-captcha" data-captcha="true"></div>
+            <p class="captcha-fallback" hidden>If the security check above doesn't appear, please try opening this page in a regular browser tab.</p>
+            <p class="privacy-note">🔒 We do not sell or share your information. Ever.</p>
+          </div>
+          <button type="submit" class="form-submit">Send Request</button>
+
+          <ul class="trust-strip">
+            <li>40 years performing</li>
+            <li>No cancellation fee</li>
+            <li>Confirmed within 24 hrs</li>
+          </ul>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==== SECTION 12: FOOTER ==== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="footer-logo">The Puppet Players</div>
+        <p class="footer-service-area">We perform in: Salt Lake City &middot; Sandy &middot; American Fork &middot; Orem &middot; Provo &middot; Riverton &middot; Tooele &middot; Ogden &middot; Layton &middot; Park City &middot; Heber &middot; And More!</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#shows">Shows</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#contact">FAQ &amp; Booking</a></li>
+          <li><a href="mailto:info@puppetplayers.org">info@puppetplayers.org</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="footer-contact">
+          <strong>Email:</strong> <a href="mailto:info@puppetplayers.org">info@puppetplayers.org</a>
+        </div>
+        <div class="footer-contact">
+          <strong>Text us:</strong> <a href="sms:8014410483">(801) 441-0483</a>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com/thepuppetplayers" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; <span id="footer-year">2026</span> The Puppet Players. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== ALL 12 SHOWS DATA =====
+    const shows = [
+      {
+        title: "The Emperors New Clothes",
+        month: "Jan",
+        thumbnail: "media/thumbs/EmperorsNC.jpg",
+        description: "The Emperor is far too preoccupied with his wardrobe to notice what his subjects need. A trickster tailor finds a way to teach him that clothes are never as important as the folks around us. The puppets are made from household objects- lots of fun!"
+      },
+      {
+        title: "The Princess and the Pea",
+        month: "Feb",
+        thumbnail: "media/thumbs/PrincessAnd%20ThePea%20Small.jpg",
+        description: "One of Hans Christian Andersen's most beloved children's classics. Princess Picklella is a quirky princess ready to fall into love with the handsome prince. But first, she must pass the royalty test, involving a stack of mattresses and a little green vegetable."
+      },
+      {
+        title: "Little Bunny Fru Fru",
+        month: "Mar",
+        thumbnail: "media/thumbs/BunnyFruFru.jpg",
+        description: "A story about being nice. Bunny Fru Fru is moving into the forest, but he isn't being very nice to his new neighbors, especially the little mice. Luckily, the Good Fairy comes around to teach him a lesson. Will he learn it, or will Fairy turn him into a Goon?"
+      },
+      {
+        title: "Stone Soup",
+        month: "Apr",
+        thumbnail: "media/thumbs/StoneSoup.jpg",
+        description: "A story about sharing. A weary traveler asks for food, but is turned away by all the townsfolk. He decides to make soup out of a stone, and the villagers stand amazed as he prepares the huge pot. If only he had a little salt... a bit of potato... a tiny carrot. What a wonderful soup it would be! A charming Scandinavian Folktale."
+      },
+      {
+        title: "The Little Red Hen",
+        month: "May",
+        thumbnail: "media/thumbs/Little%20Red%20Hen.png",
+        description: "Classic children's story about a mother hen who tries to get her friends to help make bread, but they always seem too busy. She plants, waters, harvests, grinds, and bakes, ending up with a feast of bread, rolls and muffins. That's when the doorbell rings…"
+      },
+      {
+        title: "Jack and the Beanstalk",
+        month: "Jun",
+        thumbnail: "media/thumbs/JackAndTheBeanstalk_sm.jpg",
+        description: "Jack is worried about the noisy thunder shaking up his farm. A slick salesman, a few magic beans, and he is climbing the beanstalk to investigate. It's that pesky giant, of course- sneezing!"
+      },
+      {
+        title: "Special 4th of July show TBA",
+        month: "Jul",
+        thumbnail: "",
+        description: "Coming Soon!"
+      },
+      {
+        title: "The Treasure Chest",
+        month: "Aug",
+        thumbnail: "media/thumbs/TreasureChest_sm.jpg",
+        description: "Our boy hero thinks he is simply going fishing for the day. But instead, he has quite an adventure. He encounters a pirate, a sea serpent, and a mysterious sea chest with very peculiar noises coming from within. Just what is going on here?"
+      },
+      {
+        title: "The Princess and the Frog",
+        month: "Sep",
+        thumbnail: "media/thumbs/Princess&Frog_small.jpg",
+        description: "A story about keeping your promise. In this charming Brothers Grimm tale, an ugly ogre turns the prince into a frog. When a princess drops her golden ball into the pond, the frog offers to get it- IF she makes him certain promises. Will she really have to kiss this Frog?"
+      },
+      {
+        title: "There's a Monster in my Bathtub",
+        month: "Oct",
+        thumbnail: "media/thumbs/Monster-in-Bathtub-email.jpg",
+        description: "Billy can't take a bath because there's a big furry monster taking up all the space and using all his soap. He tries all sorts of tricks to get the creature out, but nothing seems to work. However do you move a stubborn, soggy monster?"
+      },
+      {
+        title: "Turkey has a Terrible Temper",
+        month: "Nov",
+        thumbnail: "media/thumbs/Turkey-Mouse-Feather.jpg",
+        description: "Tess Turkey has a problem with her temper. One day her tantrum is so bad she loses her tail feathers. Her friends come up with a way to replace her feathers, and also teach her to be nicer."
+      },
+      {
+        title: "The Shoemaker and the Elves",
+        month: "Dec",
+        thumbnail: "media/thumbs/Shoemaker.jpg",
+        description: "A poor shoemaker and his wife haven't a penny in the house. They have run out of everything, including hope. Two magical elves stop by to lend a hand while the couple is sleeping. Whatever will the old folks find in the morning?"
+      }
+    ];
+
+    // ===== STICKY NAVIGATION =====
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // IntersectionObserver sentinel - fires only when the 50px threshold is crossed, no scroll thrash
+    const _navSentinel = document.createElement('div');
+    _navSentinel.style.cssText = 'position:absolute;top:50px;left:0;width:1px;height:1px;pointer-events:none;';
+    document.body.prepend(_navSentinel);
+    new IntersectionObserver(function(entries) {
+      navbar.classList.toggle('scrolled', !entries[0].isIntersecting);
+    }, { rootMargin: '0px' }).observe(_navSentinel);
+
+    hamburger.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('active') ? 'true' : 'false');
+    });
+
+    // Close mobile menu on link click
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Set date field minimum to today
+    const dateInput = document.getElementById('date');
+    if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+    // Close mobile menu on Escape or outside-click
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        hamburger.focus();
+      }
+    });
+    document.addEventListener('click', function(e) {
+      if (!mobileMenu.classList.contains('active')) return;
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // ===== INTERSECTION OBSERVER FOR FADE-IN SECTIONS =====
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // ===== SHOWS CAROUSEL (3 per page, 4 pages = 12 shows) =====
+    const showsTrack = document.getElementById('showsTrack');
+    const showsDots  = document.getElementById('showsDots');
+    const showsPrev  = document.getElementById('showsPrev');
+    const showsNext  = document.getElementById('showsNext');
+
+    let showsPage = 0;
+    let SHOWS_PER_PAGE = (window.innerWidth <= 768) ? 1 : 3;
+    let TOTAL_PAGES    = Math.ceil(shows.length / SHOWS_PER_PAGE);
+    let showsTimer;
+
+    // Build page-divs based on current SHOWS_PER_PAGE.
+    function buildShowsCarousel() {
+      showsTrack.innerHTML = '';
+      for (let p = 0; p < TOTAL_PAGES; p++) {
+        const page = document.createElement('div');
+        page.className = 'shows-page';
+        page.style.gridTemplateColumns = `repeat(${SHOWS_PER_PAGE}, 1fr)`;
+        shows.slice(p * SHOWS_PER_PAGE, (p + 1) * SHOWS_PER_PAGE).forEach(show => {
+          const card = document.createElement('div');
+          card.className = 'show-card';
+          card.innerHTML = `
+            ${show.thumbnail
+              ? `<div class="show-card-thumb"><img src="${show.thumbnail}" alt="${show.title}" loading="lazy" decoding="async"></div>`
+              : `<div class="show-card-thumb show-card-thumb--placeholder show-card-thumb--starburst">
+                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="American flag">
+                     <!-- Dark letterbox background (flag is 1.9:1, letterboxed in the square crop) -->
+                     <rect width="200" height="200" fill="#1a1a1a"/>
+                     <!-- Flag is 200 wide x 105.2632 tall, centered vertically: y from 47.3684 to 152.6316 -->
+                     <!-- Stripe height = 105.2632 / 13 = 8.0972; canton height = 7 stripes = 56.6805 -->
+                     <g transform="translate(0,47.3684)">
+                       <!-- Red field, with 6 white stripes overlaid (stripes 2,4,6,8,10,12) -->
+                       <rect width="200" height="105.2632" fill="#B22234"/>
+                       <rect y="8.0972"  width="200" height="8.0972" fill="#FFFFFF"/>
+                       <rect y="24.2914" width="200" height="8.0972" fill="#FFFFFF"/>
+                       <rect y="40.4857" width="200" height="8.0972" fill="#FFFFFF"/>
+                       <rect y="56.6800" width="200" height="8.0972" fill="#FFFFFF"/>
+                       <rect y="72.8742" width="200" height="8.0972" fill="#FFFFFF"/>
+                       <rect y="89.0685" width="200" height="8.0972" fill="#FFFFFF"/>
+                       <!-- Canton: width 80 (40% of flag), height = 7 stripes = 56.6805 -->
+                       <rect width="80" height="56.6805" fill="#3C3B6E"/>
+                       <!-- 50 stars: 9 rows alternating 6-5-6-5-6-5-6-5-6.
+                            Horizontal step = 80/12 = 6.6667, vertical step = 56.6805/10 = 5.66805.
+                            Star outer radius = 2.4, inner radius ~0.9168 (golden-ratio 5-pointed star). -->
+                       <defs>
+                         <symbol id="us-flag-star" overflow="visible">
+                           <polygon fill="#FFFFFF" points="0,-2.4 0.5559,-0.7416 2.2829,-0.7416 0.8635,0.2832 1.4090,1.9416 0,0.9168 -1.4090,1.9416 -0.8635,0.2832 -2.2829,-0.7416 -0.5559,-0.7416"/>
+                         </symbol>
+                       </defs>
+                       <!-- Row 1 (6 stars) y=5.66805 -->
+                       <use href="#us-flag-star" x="6.6667" y="5.66805"/>
+                       <use href="#us-flag-star" x="20.0000" y="5.66805"/>
+                       <use href="#us-flag-star" x="33.3333" y="5.66805"/>
+                       <use href="#us-flag-star" x="46.6667" y="5.66805"/>
+                       <use href="#us-flag-star" x="60.0000" y="5.66805"/>
+                       <use href="#us-flag-star" x="73.3333" y="5.66805"/>
+                       <!-- Row 2 (5 stars) y=11.3361 -->
+                       <use href="#us-flag-star" x="13.3333" y="11.3361"/>
+                       <use href="#us-flag-star" x="26.6667" y="11.3361"/>
+                       <use href="#us-flag-star" x="40.0000" y="11.3361"/>
+                       <use href="#us-flag-star" x="53.3333" y="11.3361"/>
+                       <use href="#us-flag-star" x="66.6667" y="11.3361"/>
+                       <!-- Row 3 (6 stars) y=17.0042 -->
+                       <use href="#us-flag-star" x="6.6667" y="17.0042"/>
+                       <use href="#us-flag-star" x="20.0000" y="17.0042"/>
+                       <use href="#us-flag-star" x="33.3333" y="17.0042"/>
+                       <use href="#us-flag-star" x="46.6667" y="17.0042"/>
+                       <use href="#us-flag-star" x="60.0000" y="17.0042"/>
+                       <use href="#us-flag-star" x="73.3333" y="17.0042"/>
+                       <!-- Row 4 (5 stars) y=22.6722 -->
+                       <use href="#us-flag-star" x="13.3333" y="22.6722"/>
+                       <use href="#us-flag-star" x="26.6667" y="22.6722"/>
+                       <use href="#us-flag-star" x="40.0000" y="22.6722"/>
+                       <use href="#us-flag-star" x="53.3333" y="22.6722"/>
+                       <use href="#us-flag-star" x="66.6667" y="22.6722"/>
+                       <!-- Row 5 (6 stars) y=28.3403 -->
+                       <use href="#us-flag-star" x="6.6667" y="28.3403"/>
+                       <use href="#us-flag-star" x="20.0000" y="28.3403"/>
+                       <use href="#us-flag-star" x="33.3333" y="28.3403"/>
+                       <use href="#us-flag-star" x="46.6667" y="28.3403"/>
+                       <use href="#us-flag-star" x="60.0000" y="28.3403"/>
+                       <use href="#us-flag-star" x="73.3333" y="28.3403"/>
+                       <!-- Row 6 (5 stars) y=34.0083 -->
+                       <use href="#us-flag-star" x="13.3333" y="34.0083"/>
+                       <use href="#us-flag-star" x="26.6667" y="34.0083"/>
+                       <use href="#us-flag-star" x="40.0000" y="34.0083"/>
+                       <use href="#us-flag-star" x="53.3333" y="34.0083"/>
+                       <use href="#us-flag-star" x="66.6667" y="34.0083"/>
+                       <!-- Row 7 (6 stars) y=39.6764 -->
+                       <use href="#us-flag-star" x="6.6667" y="39.6764"/>
+                       <use href="#us-flag-star" x="20.0000" y="39.6764"/>
+                       <use href="#us-flag-star" x="33.3333" y="39.6764"/>
+                       <use href="#us-flag-star" x="46.6667" y="39.6764"/>
+                       <use href="#us-flag-star" x="60.0000" y="39.6764"/>
+                       <use href="#us-flag-star" x="73.3333" y="39.6764"/>
+                       <!-- Row 8 (5 stars) y=45.3444 -->
+                       <use href="#us-flag-star" x="13.3333" y="45.3444"/>
+                       <use href="#us-flag-star" x="26.6667" y="45.3444"/>
+                       <use href="#us-flag-star" x="40.0000" y="45.3444"/>
+                       <use href="#us-flag-star" x="53.3333" y="45.3444"/>
+                       <use href="#us-flag-star" x="66.6667" y="45.3444"/>
+                       <!-- Row 9 (6 stars) y=51.0125 -->
+                       <use href="#us-flag-star" x="6.6667" y="51.0125"/>
+                       <use href="#us-flag-star" x="20.0000" y="51.0125"/>
+                       <use href="#us-flag-star" x="33.3333" y="51.0125"/>
+                       <use href="#us-flag-star" x="46.6667" y="51.0125"/>
+                       <use href="#us-flag-star" x="60.0000" y="51.0125"/>
+                       <use href="#us-flag-star" x="73.3333" y="51.0125"/>
+                     </g>
+                   </svg>
+                 </div>`
+            }
+            <div class="show-card-body">
+              <h3 class="show-card-title">${show.title}</h3>
+              <div class="show-badges">
+                <span class="badge badge-grade">${show.month}</span>
+              </div>
+              <p class="show-description">${show.description}</p>
+            </div>
+          `;
+          page.appendChild(card);
+        });
+        showsTrack.appendChild(page);
+      }
+    }
+
+    function buildShowsDots() {
+      showsDots.innerHTML = '';
+      for (let i = 0; i < TOTAL_PAGES; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+        dot.addEventListener('click', () => { showsPage = i; updateShows(); resetShowsTimer(); });
+        showsDots.appendChild(dot);
+      }
+    }
+
+    function updateShows() {
+      // Key fix: each page is 100% of the viewport, so -N*100% is always correct
+      showsTrack.style.transform = `translateX(-${showsPage * 100}%)`;
+      showsDots.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === showsPage));
+    }
+
+    function nextShows() { showsPage = (showsPage + 1) % TOTAL_PAGES; updateShows(); }
+    function prevShows() { showsPage = (showsPage - 1 + TOTAL_PAGES) % TOTAL_PAGES; updateShows(); }
+    function startShowsTimer() { showsTimer = setInterval(nextShows, 6000); }
+    function stopShowsTimer()  { clearInterval(showsTimer); }
+    function resetShowsTimer() { stopShowsTimer(); startShowsTimer(); }
+
+    buildShowsCarousel();
+    buildShowsDots();
+    updateShows();
+    startShowsTimer();
+
+    // Rebuild carousel when crossing the mobile breakpoint
+    let _resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(_resizeTimer);
+      _resizeTimer = setTimeout(function() {
+        const newPerPage = (window.innerWidth <= 768) ? 1 : 3;
+        if (newPerPage === SHOWS_PER_PAGE) return;
+        SHOWS_PER_PAGE = newPerPage;
+        TOTAL_PAGES    = Math.ceil(shows.length / SHOWS_PER_PAGE);
+        showsPage      = 0;
+        buildShowsCarousel();
+        buildShowsDots();
+        updateShows();
+        resetShowsTimer();
+      }, 150);
+    });
+
+    // ===== TOUCH SWIPE UTILITY =====
+    function addSwipe(el, onLeft, onRight) {
+      if (!el) return;
+      let startX = 0, startY = 0, tracking = false;
+      el.addEventListener('touchstart', function(e) {
+        if (e.touches.length !== 1) { tracking = false; return; }
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        tracking = true;
+      }, { passive: true });
+      el.addEventListener('touchend', function(e) {
+        if (!tracking) return;
+        tracking = false;
+        const t = e.changedTouches[0];
+        const dx = t.clientX - startX;
+        const dy = t.clientY - startY;
+        if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+        if (dx < 0) { onLeft && onLeft(); }
+        else        { onRight && onRight(); }
+      }, { passive: true });
+    }
+
+    showsNext.addEventListener('click', () => { nextShows(); resetShowsTimer(); });
+    showsPrev.addEventListener('click', () => { prevShows(); resetShowsTimer(); });
+    const showsViewportEl = document.getElementById('showsViewport');
+    showsViewportEl.addEventListener('mouseenter', stopShowsTimer);
+    showsViewportEl.addEventListener('mouseleave', startShowsTimer);
+    showsViewportEl.addEventListener('focusin',  stopShowsTimer);
+    showsViewportEl.addEventListener('focusout', startShowsTimer);
+    // Swipe left = next page, right = previous page
+    addSwipe(showsViewportEl,
+      function() { nextShows(); resetShowsTimer(); },
+      function() { prevShows(); resetShowsTimer(); });
+
+    // ===== SHOW MODAL =====
+    const viewAllBtn = document.getElementById('viewAllBtn');
+    const showModal = document.getElementById('showModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalShowsGrid = document.getElementById('modalShowsGrid');
+
+    function buildModalGrid() {
+      modalShowsGrid.innerHTML = '';
+      shows.forEach(show => {
+        const card = document.createElement('div');
+        card.className = 'modal-show-card';
+        card.innerHTML = `
+          <h3>${show.title}</h3>
+          <div class="show-badges">
+            <span class="badge badge-grade">${show.month}</span>
+          </div>
+          <p>${show.description}</p>
+        `;
+        modalShowsGrid.appendChild(card);
+      });
+    }
+
+    buildModalGrid();
+
+    viewAllBtn.addEventListener('click', function() {
+      showModal.classList.add('active');
+      showModal.scrollTop = 0;
+    });
+
+    modalClose.addEventListener('click', function() {
+      showModal.classList.remove('active');
+    });
+
+    showModal.addEventListener('click', function(e) {
+      if (e.target === showModal) {
+        showModal.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && showModal.classList.contains('active')) {
+        showModal.classList.remove('active');
+      }
+    });
+
+    // ===== TESTIMONIALS CAROUSEL - markup commented out; JS removed =====
+
+    // ===== CREW BUBBLES (modal) =====
+    (function initCrewBubbles() {
+      function init() {
+      var bioData = {
+        'bio-morgan': {
+          name: 'Morgan',
+          role: 'Director',
+          paragraphs: [
+            'Morgan has been enchanted by puppet productions from a young age - an era that included The Dark Crystal, Labyrinth, Oobi, and Between the Lions. One of her first memories of puppetry was making a dragon sock puppet named “Pea ‘not Pee’,” whom her little sister brought to life in a manner hilarious enough to nearly make Morgan pee her pants with laughter.',
+            'After joking that “if animation didn’t work out, she’d get a job on Sesame Street” during her time studying animation at UVU, Morgan graduated with her B.S. and - jokes aside - now works full-time bringing the art of puppetry to audiences young and old. She feels incredibly blessed to wake up and put her heart and soul into it every day.',
+            'Biggest thanks to all the patrons and centers that share their love and support, and to Coralie and Ralph for taking a chance on this young, starry-eyed puppeteer. You can find Morgan’s other works at <a href="https://www.shmorgishb.org" target="_blank" rel="noopener">www.shmorgishb.org</a>.'
+          ]
+        },
+        'bio-aurora': {
+          name: 'Aurora',
+          role: 'Puppeteer',
+          paragraphs: [
+            'Aurora has had a love for performing since she was a child. She participated in many musicals and plays over the years that have cultivated that love into something she can share with others. Story telling through live performance and song is her biggest passion.',
+             'Aurora is passionate about storytelling through music. Having been a singer all her life, she is excited to teach children using this important medium while making learning visually engaging through puppetry.',
+             'It is a privilege and a pleasure to make these stories come to life with the wonderful people of The Puppet Players.'
+          ]
+        },
+        'bio-kylie': {
+          name: 'Kylie',
+          role: 'Puppeteer',
+          paragraphs: [
+            'Kylie brings a thoughtful, creative, and child-centered approach to puppetry, shaped by her background in working with children and her Master’s degree in Applied Psychology. With experience in summer camps, nonprofit art programs, and community settings, she has spent years helping children learn, express themselves, and connect through play.',
+            'Kylie is especially passionate about the mental and emotional benefits of slowing down and returning to more “analog” forms of interaction. In a world that often moves quickly and relies heavily on screens, she loves creating moments where children can engage their imaginations, connect with others, and be fully present. Through puppetry, she focuses on developmentally appropriate play, meaningful interaction, and the simple joy of storytelling.',
+            'In addition to her work with children, Kylie is an artist who has explored a variety of creative mediums and even ran her own small business. She brings that same creativity and curiosity into every performance, always looking for ways to make each show engaging, interactive, and memorable.',
+            'Kylie feels incredibly grateful to be part of The Puppet Players, helping continue a tradition that encourages imagination, connection, and laughter for kids of all ages'
+          ]
+        },
+        'bio-founders': {
+          name: 'Coralie & Ralph',
+          role: 'Founders',
+          paragraphs: [
+            'Coralie Leue was The Puppet Players’ principal puppeteer for many years, performed alongside her favorite puppet friend Marvin the Monster. When she got too busy as the sole puppeteer, she invited her husband Ralph to join the business. Ralph - also a talented puppeteer - performed with his puppet host Mr. Bear.',
+            '“I love the art of puppetry,” Ralph says. “It’s absolutely the best way I know to teach and entertain kids.” Marvin and Mr. Bear agree.',
+            '“Children have such fantastic imaginations,” says Coralie. “I make the characters move around and talk, but it is really the kids’ own imaginations that make them come alive.”',
+            'Together, Ralph and Coralie performed an average of 1,200 shows per year over almost 40 years - roughly <strong>60,000 shows</strong> in their careers. They have since retired, passing The Puppet Players to Morgan Boyd, a talented and creative puppeteer continuing their legacy.'
+          ]
+        }
+      };
+
+      var modal    = document.getElementById('crewBioModal');
+      var closeBtn = document.getElementById('crewBioClose');
+      var contentEl = document.getElementById('crewBioContent');
+      var bubbles  = document.querySelectorAll('.crew-bubble');
+
+      /* early-exit guard: if any critical element is missing, log and bail */
+      if (!modal || !contentEl || bubbles.length === 0) {
+        console.warn('[crewBio] init skipped:', { modal: !!modal, contentEl: !!contentEl, bubbleCount: bubbles.length });
+        return;
+      }
+
+      var activeBubble = null;
+
+      function openCrewBio(targetId, triggerEl) {
+        try {
+        var data = bioData[targetId];
+        if (!data) return;
+        var ps = data.paragraphs.map(function(p) { return '<p>' + p + '</p>'; }).join('');
+        contentEl.innerHTML =
+          '<h4 id="crewBioModalTitle" class="crew-bio-name">' + data.name +
+          ' <span class="crew-bio-role">- ' + data.role + '</span></h4>' + ps;
+        activeBubble = triggerEl || null;
+        modal.classList.add('active');
+        modal.scrollTop = 0;
+        document.body.classList.add('modal-open');
+        if (closeBtn) closeBtn.focus();
+        bubbles.forEach(function(b) {
+          b.setAttribute('aria-expanded', b === triggerEl ? 'true' : 'false');
+        });
+        } catch(err) { console.error('[crewBio] open failed', err); }
+      }
+
+      function closeCrewBio() {
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        bubbles.forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
+        if (activeBubble) { activeBubble.focus(); activeBubble = null; }
+      }
+
+      bubbles.forEach(function(bubble) {
+        bubble.addEventListener('click', function() {
+          openCrewBio(bubble.getAttribute('data-target'), bubble);
+        });
+        // No custom keydown needed - native <button> fires click on Enter/Space
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeCrewBio);
+      modal.addEventListener('click', function(e) { if (e.target === modal) closeCrewBio(); });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeCrewBio();
+      });
+      } // end init()
+
+      /* DOMContentLoaded guard - works regardless of script position in the file */
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+
+    // ===== DYNAMIC COPYRIGHT YEAR =====
+    (function() {
+      var y = document.getElementById('footer-year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+
+    // ===== FAQ ACCORDION =====
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', function() {
+        const item = this.parentElement;
+        const wasOpen = item.classList.contains('is-open');
+
+        // Close all items
+        accordionHeaders.forEach(otherHeader => {
+          const otherItem = otherHeader.parentElement;
+          otherItem.classList.remove('is-open');
+          otherItem.querySelector('.accordion-content').classList.remove('active');
+          otherHeader.setAttribute('aria-expanded', 'false');
+        });
+
+        // Open this one if it was closed
+        if (!wasOpen) {
+          item.classList.add('is-open');
+          item.querySelector('.accordion-content').classList.add('active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+    // ===== CONTACT FORM =====
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    let isSubmitting = false;
+
+    function showFormError(msg) {
+      errorMessage.textContent = msg;
+      errorMessage.classList.add('show');
+    }
+    function clearFormError() {
+      errorMessage.textContent = '';
+      errorMessage.classList.remove('show');
+    }
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // In-flight guard - prevents double-submit race
+      if (isSubmitting) return;
+
+      const submitBtn = contactForm.querySelector('.form-submit');
+      clearFormError();
+
+      // Client-side hCaptcha check - the Web3Forms client script writes its
+      // token into a hidden input named "h-captcha-response" once solved.
+      const captchaField = contactForm.querySelector('[name="h-captcha-response"]');
+      if (!captchaField || !captchaField.value) {
+        showFormError('Please complete the security check above before sending.');
+        return;
+      }
+
+      isSubmitting = true;
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          successMessage.classList.add('show');
+          contactForm.querySelectorAll('.form-group, .h-captcha-wrapper, .form-submit, .trust-strip').forEach(el => el.style.display = 'none');
+        } else {
+          submitBtn.textContent = 'Send Request';
+          submitBtn.disabled = false;
+          isSubmitting = false;
+          showFormError('Something went wrong: ' + (data.message || 'Please try again.'));
+        }
+      } catch (err) {
+        submitBtn.textContent = 'Send Request';
+        submitBtn.disabled = false;
+        isSubmitting = false;
+        showFormError('Network error - please check your connection and try again.');
+      }
+    });
+  </script>
+
+
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    /* hCaptcha fallback - if the script can't load (e.g. file:// preview, no
+       internet, or the user has blocked third-party scripts) the .h-captcha
+       div will never sprout an iframe. After 3s we surface a small italic
+       hint so the form doesn't look broken. */
+    (function () {
+      setTimeout(function () {
+        var cap = document.querySelector('.h-captcha');
+        var msg = document.querySelector('.captcha-fallback');
+        if (!cap || !msg) return;
+        if (!cap.querySelector('iframe')) {
+          msg.hidden = false;
+        }
+      }, 3000);
+    })();
+  </script>
+
+  <!-- Crew Bio Modal - placed here (body root) so z-index:2000 is in root stacking context -->
+  <div class="modal-overlay" id="crewBioModal" role="dialog" aria-modal="true" aria-labelledby="crewBioModalTitle">
+    <div class="modal crew-bio-modal-inner">
+      <button class="modal-close" id="crewBioClose" aria-label="Close bio">&times;</button>
+      <div id="crewBioContent"><!-- populated by JS --></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
