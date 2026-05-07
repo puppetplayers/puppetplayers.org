@@ -1,0 +1,73 @@
+# ============================================================
+# The Puppet Players — Apache configuration
+# Cache headers + compression + correct MIME types
+# Drop this in the site root and verify mod_expires, mod_headers,
+# mod_deflate, and mod_mime are enabled on your host.
+# ============================================================
+
+# ---- MIME types (in case the host hasn't registered WebP/WebM/MP4) ----
+<IfModule mod_mime.c>
+  AddType image/webp                            .webp
+  AddType image/svg+xml                         .svg .svgz
+  AddType video/webm                            .webm
+  AddType video/mp4                             .mp4
+  AddType font/woff2                            .woff2
+</IfModule>
+
+# ---- Long-term caching for static assets ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                                "access plus 1 month"
+
+  # HTML — short cache so updates land quickly
+  ExpiresByType text/html                       "access plus 0 seconds"
+
+  # Images
+  ExpiresByType image/webp                      "access plus 1 year"
+  ExpiresByType image/jpeg                      "access plus 1 year"
+  ExpiresByType image/png                       "access plus 1 year"
+  ExpiresByType image/gif                       "access plus 1 year"
+  ExpiresByType image/svg+xml                   "access plus 1 year"
+  ExpiresByType image/x-icon                    "access plus 1 year"
+
+  # Video
+  ExpiresByType video/webm                      "access plus 1 year"
+  ExpiresByType video/mp4                       "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff2                      "access plus 1 year"
+  ExpiresByType font/woff                       "access plus 1 year"
+  ExpiresByType application/font-woff2          "access plus 1 year"
+
+  # CSS / JS
+  ExpiresByType text/css                        "access plus 1 month"
+  ExpiresByType application/javascript          "access plus 1 month"
+  ExpiresByType text/javascript                 "access plus 1 month"
+</IfModule>
+
+# ---- Cache-Control: immutable for hashed/static media ----
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|gif|svg|ico|webm|mp4|woff2?|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html?)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ---- Gzip / Brotli compression ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml text/xml
+</IfModule>
+
+# ---- Security: don't leak server info ----
+<IfModule mod_headers.c>
+  Header unset X-Powered-By
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

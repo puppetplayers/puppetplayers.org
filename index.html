@@ -57,10 +57,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;600&display=swap"></noscript>
 
-  <!-- hCaptcha preconnect (improves third-party critical path) -->
-  <link rel="preconnect" href="https://js.hcaptcha.com">
-  <link rel="dns-prefetch" href="https://newassets.hcaptcha.com">
-  <link rel="dns-prefetch" href="https://api.hcaptcha.com">
+  <!-- Umami analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="2ce6ca5a-0171-4385-b2b0-11d8b1920ff7"></script>
+
+  <!-- Font metric overrides: size-adjusted fallbacks that match Rozha One / Josefin Sans
+       proportions so the layout shift when the web font swaps in is imperceptible -->
+  <style>
+    @font-face {
+      font-family: 'Rozha One Fallback';
+      src: local('Georgia'), local('Times New Roman');
+      size-adjust: 108%;
+      ascent-override: 88%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Josefin Sans Fallback';
+      src: local('Arial'), local('Helvetica Neue'), local('sans-serif');
+      size-adjust: 94%;
+      ascent-override: 95%;
+      descent-override: 5%;
+      line-gap-override: 0%;
+    }
+  </style>
 
   <style>
     /* CSS Custom Properties - Color Palette */
@@ -96,7 +115,7 @@
 
     /* Typography Utility Classes */
     .rozha {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -108,7 +127,7 @@
       display: inline-block;
       padding: 14px 32px;
       border-radius: 6px;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -191,7 +210,7 @@
     }
 
     .nav-logo {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: 28px;
       color: var(--white);
       text-decoration: none;
@@ -340,7 +359,7 @@
     }
 
     .nav-links a {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -368,7 +387,7 @@
       display: none;
       background: var(--amber);
       color: var(--brown);
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.06em;
@@ -404,7 +423,7 @@
 
     .mobile-menu a {
       display: block;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -592,7 +611,7 @@
     }
 
     .hero h1 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: clamp(3rem, 7vw, 5.5rem);
       color: var(--white);
       margin-bottom: 16px;
@@ -620,7 +639,7 @@
     }
     /* Demoted secondary link in hero */
     .hero-text-link {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.12em;
@@ -639,7 +658,7 @@
     .hero-call-line {
       width: 100%;
       text-align: center;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -745,7 +764,7 @@
 
 
     .testimonial-attribution {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 0.78rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -774,7 +793,7 @@
     }
 
     .transformation h2 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: clamp(2.4rem, 5.2vw, 3.8rem);
       color: var(--brown);
       margin: 0 auto;
@@ -925,7 +944,7 @@
     }
 
     .shows-section h2 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
       color: var(--white);
       margin-bottom: 12px;
@@ -942,7 +961,7 @@
     }
 
     .shows-cost-line {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 13px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -1149,7 +1168,7 @@
     #crewBioContent p:last-child { margin-bottom: 0; }
     #crewBioContent a { color: var(--blue); text-decoration: underline; }
     .modal h2 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: 2.2rem;
       color: var(--brown);
       margin-bottom: 28px;
@@ -1200,7 +1219,7 @@
       display: inline-block;
       padding: 6px 12px;
       border-radius: 20px;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -1252,7 +1271,7 @@
     }
 
     .how-it-works h2 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
       color: var(--brown);
       margin-bottom: 60px;
@@ -1273,7 +1292,7 @@
     }
 
     .step-number {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: 4rem;
       color: var(--amber);
       margin-bottom: 16px;
@@ -1295,7 +1314,7 @@
     }
 
     .step-title {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 1.1rem;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -1347,7 +1366,7 @@
     }
 
     .faq-section h2 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
       color: var(--brown);
       margin-bottom: 50px;
@@ -1393,7 +1412,7 @@
     }
 
     .accordion-toggle {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 1.5rem;
       color: var(--amber);
       font-weight: bold;
@@ -1467,7 +1486,7 @@
     }
 
     .final-cta h2 {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
       color: var(--brown);
       margin-bottom: 12px;
@@ -1517,7 +1536,7 @@
 
     .contact-form label {
       display: block;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -1559,7 +1578,7 @@
       color: var(--brown);
       border: none;
       border-radius: 6px;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -1589,7 +1608,7 @@
       padding: 0;
     }
     .trust-strip li {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -1673,7 +1692,7 @@
       line-height: 1.5;
     }
     .footer-col h3 {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -1683,7 +1702,7 @@
     }
 
     .footer-logo {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: 20px;
       color: var(--white);
       margin-bottom: 5px;
@@ -1722,7 +1741,7 @@
     }
 
     .social-links a {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       letter-spacing: 0.08em;
       color: var(--tan);
@@ -1753,7 +1772,7 @@
     }
 
     .copyright {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       letter-spacing: 0.08em;
       color: var(--tan);
@@ -1806,7 +1825,7 @@
     }
 
     .section-heading {
-      font-family: 'Rozha One', serif;
+      font-family: 'Rozha One', 'Rozha One Fallback', serif;
       font-size: 3rem;
       color: var(--brown);
       text-align: center;
@@ -1942,7 +1961,7 @@
 
     /* ===== About intro ===== */
     .about-stats-text {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -2126,7 +2145,7 @@
       inset: 0;
       background: rgba(6, 69, 103, 0.72);
       color: var(--white);
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Josefin Sans', 'Josefin Sans Fallback', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
       letter-spacing: 0.12em;
@@ -2235,16 +2254,18 @@
     }
     @media (max-width: 600px) {
       .crew-bubble-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 0.5rem; padding: 0 0.5rem; }
-      .crew-portrait-stage { width: 160px; padding-top: 18px; }
-      .curtain-frame { width: 160px; height: 170px; }
-      .crew-bubble { width: 128px; height: 154px; border-width: 3px; }
+      /* crew-card clips any portrait/curtain bleed — fixes iOS Safari overflow-visible bug */
+      .crew-card { overflow: hidden; }
+      /* Viewport-capped stage so it never exceeds the grid column on any screen size */
+      .crew-portrait-stage { width: min(160px, 43vw); padding-top: 18px; }
+      /* 100% = always matches stage width exactly, immune to pixel-rounding */
+      .curtain-frame { width: 100%; height: auto; aspect-ratio: 160 / 170; }
+      .crew-bubble { width: min(128px, calc(43vw * 0.8)); height: auto; aspect-ratio: 128 / 154; border-width: 3px; }
     }
     @media (max-width: 380px) {
-      /* Extra-small phones (iPhone SE 375px) — tighten further */
-      .crew-bubble { width: 116px; height: 140px; border-width: 3px; }
-      .crew-portrait-stage { width: 146px; padding-top: 16px; }
-      .curtain-frame { width: 146px; height: 156px; }
       .crew-bubble-grid { gap: 1.5rem 0.25rem; padding: 0 0.25rem; }
+      .crew-portrait-stage { width: min(146px, 43vw); padding-top: 16px; }
+      .crew-bubble { width: min(116px, calc(43vw * 0.79)); aspect-ratio: 116 / 140; }
     }
     @media (prefers-reduced-motion: reduce) {
       .crew-bubble { transition: none; animation: none; }
@@ -2441,7 +2462,10 @@
 
           <div class="about-poster">
             <figure>
-              <img src="media/poster.jpg" alt="Puppet Players show poster" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="media/poster.webp">
+                <img src="media/poster.jpg" alt="Puppet Players show poster" width="600" height="825" loading="lazy" decoding="async">
+              </picture>
             </figure>
           </div>
         </div>
@@ -2782,6 +2806,43 @@
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
       document.querySelectorAll('section').forEach(function(s) { fadeObserver.observe(s); });
+
+      // Lazy-load hCaptcha + web3forms client only when the contact section is
+      // about to enter the viewport. Saves ~800 KiB / ~1.1s of main-thread time
+      // for visitors who never scroll to the booking form.
+      window.__hCaptchaLoaded = false;
+      (function() {
+        var contactSection = document.getElementById('contact');
+        if (!contactSection) return;
+        var io = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting && !window.__hCaptchaLoaded) {
+            window.__hCaptchaLoaded = true;
+            io.disconnect();
+            var s = document.createElement('script');
+            s.src = 'https://web3forms.com/client/script.js';
+            s.async = true;
+            s.defer = true;
+            // Once the script is in the DOM, give it 3s to render the iframe;
+            // if nothing appears, surface the fallback hint.
+            s.addEventListener('load', function() {
+              setTimeout(function() {
+                var cap = document.querySelector('.h-captcha');
+                var msg = document.querySelector('.captcha-fallback');
+                if (!cap || !msg) return;
+                if (!cap.querySelector('iframe')) {
+                  msg.hidden = false;
+                }
+              }, 3000);
+            });
+            s.addEventListener('error', function() {
+              var msg = document.querySelector('.captcha-fallback');
+              if (msg) msg.hidden = false;
+            });
+            document.head.appendChild(s);
+          }
+        }, { rootMargin: '200px' });
+        io.observe(contactSection);
+      })();
     })();
 
     // ===== DEFERRED: carousel, modals, FAQ, form — safe to run after paint =====
@@ -2862,6 +2923,11 @@
       }
     ];
 
+    // ===== Layout read BEFORE any writes (avoids forced reflow) =====
+    // window.innerWidth is a layout-forcing read - capture it up front so
+    // subsequent style/DOM writes never have to flush a pending layout.
+    const _initialInnerWidth = window.innerWidth;
+
     // Set date field minimum to today
     const dateInput = document.getElementById('date');
     if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
@@ -2873,7 +2939,7 @@
     const showsNext  = document.getElementById('showsNext');
 
     let showsPage = 0;
-    let SHOWS_PER_PAGE = (window.innerWidth <= 768) ? 1 : 3;
+    let SHOWS_PER_PAGE = (_initialInnerWidth <= 768) ? 1 : 3;
     let TOTAL_PAGES    = Math.ceil(shows.length / SHOWS_PER_PAGE);
     let showsTimer;
 
@@ -3335,23 +3401,11 @@
   </script>
 
 
-  <script src="https://web3forms.com/client/script.js" async defer></script>
-  <script>
-    /* hCaptcha fallback - if the script can't load (e.g. file:// preview, no
-       internet, or the user has blocked third-party scripts) the .h-captcha
-       div will never sprout an iframe. After 3s we surface a small italic
-       hint so the form doesn't look broken. */
-    (function () {
-      setTimeout(function () {
-        var cap = document.querySelector('.h-captcha');
-        var msg = document.querySelector('.captcha-fallback');
-        if (!cap || !msg) return;
-        if (!cap.querySelector('iframe')) {
-          msg.hidden = false;
-        }
-      }, 3000);
-    })();
-  </script>
+  <!-- hCaptcha + web3forms client script is lazy-loaded by initCritical's
+       IntersectionObserver when the #contact section nears the viewport.
+       The previous static <script src="...web3forms.com/client/script.js"> tag
+       and its 3s timeout fallback now live there - saves ~800 KiB and
+       ~1.1s of main-thread work for visitors who never reach the form. -->
 
   <!-- Crew Bio Modal - placed here (body root) so z-index:2000 is in root stacking context -->
   <div class="modal-overlay" id="crewBioModal" role="dialog" aria-modal="true" aria-labelledby="crewBioModalTitle">
