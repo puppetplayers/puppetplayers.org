@@ -2262,15 +2262,16 @@
     @media (max-width: 600px) {
       .crew-bubble-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 0.5rem; padding: 0 0.5rem; }
       /* Clip at the stage level — correct boundary, avoids cutting curtain edges */
-      .crew-portrait-stage { width: min(160px, 43vw); padding-top: 18px; overflow: hidden; }
+      /* display:block overrides flex — avoids iOS Safari flex+overflow:hidden centering bug */
+      .crew-portrait-stage { width: min(160px, 43vw); padding-top: 18px; overflow: hidden; display: block; }
       /* 100% = always matches stage width exactly, immune to pixel-rounding */
       .curtain-frame { width: 100%; height: auto; aspect-ratio: 160 / 170; }
-      .crew-bubble { width: min(128px, calc(43vw * 0.8)); height: auto; aspect-ratio: 128 / 154; border-width: 3px; }
+      .crew-bubble { display: block; margin: 0 auto; width: min(128px, calc(43vw * 0.8)); height: auto; aspect-ratio: 128 / 154; border-width: 3px; }
     }
     @media (max-width: 380px) {
       .crew-bubble-grid { gap: 1.5rem 0.25rem; padding: 0 0.25rem; }
       .crew-portrait-stage { width: min(146px, 43vw); padding-top: 16px; }
-      .crew-bubble { width: min(116px, calc(43vw * 0.79)); aspect-ratio: 116 / 140; }
+      .crew-bubble { display: block; margin: 0 auto; width: min(116px, calc(43vw * 0.79)); aspect-ratio: 116 / 140; }
     }
     @media (prefers-reduced-motion: reduce) {
       .crew-bubble { transition: none; animation: none; }
@@ -2469,7 +2470,7 @@
             <figure>
               <picture>
                 <source type="image/webp" srcset="media/poster.webp">
-                <img src="media/poster.jpg" alt="Puppet Players show poster" width="600" height="825" loading="lazy" decoding="async">
+                <img src="media/poster.jpg" alt="Puppet Players show poster" width="600" height="825">
               </picture>
             </figure>
           </div>
